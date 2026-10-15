@@ -35,6 +35,14 @@
 .dialog>footer{box-shadow:0 -14px 22px -10px rgba(15,23,42,.22)}
 @media(max-width:900px){.dialog{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px)}}
 @media (orientation:landscape) and (max-height:540px){.modal{padding:4px 8px}.dialog{max-height:calc(100dvh - 8px)}}
+/* ---- Tool family (ToolDeck/STYLE.md): shared UI font, control shape and focus ring. Colours stay per app. ---- */
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+button,input,select,textarea{font-family:inherit}
+button:focus-visible,a:focus-visible,select:focus-visible,[role=menuitem]:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+:root{--r:14px}
+.btn,.nav button,.field input,.field select,.field textarea{border-radius:10px}
+.btn.save-cta,.save-quick{border-radius:12px}
+/* ---- end tool family ---- */
 </style>
 </head><body>
 <div class="app"><aside class="side no-print"><div class="brand"><div class="logo">IF</div><div><h1>InspectFlow</h1><p>v0.9.4 follow-up</p></div></div><nav class="nav" id="nav"><button data-view="home" class="active">🏠 Dashboard</button><button data-view="templates">🧩 Templates</button><button data-view="start">▶️ Start inspection</button><button data-view="archive">📚 Archive</button><button data-view="followup">✅ Follow-up</button><button data-view="reports">📄 Reports</button><button data-view="backup">🔄 Backup / sync</button></nav><div class="syncbox"><span class="dot"></span><b>Local first · P2P sync</b><br><span>Shared sfha-sync store. Photos travel device to device.</span><div class="sync-status" id="syncStatus">Local only</div></div></aside><main class="main" id="app"></main></div><div class="modal" id="modal"><div class="dialog"><header><h3 id="modalTitle"></h3><button class="x" onclick="closeModal()">✕</button></header><div class="body" id="modalBody"></div><footer id="modalFooter"></footer></div></div><input id="importFile" type="file" accept="application/json" class="hidden">
