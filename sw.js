@@ -11,7 +11,7 @@
    touches caches whose name starts with its own PREFIX. */
 const PREFIX = 'inspectflow-shell-';
 const CACHE = PREFIX + 'v1';
-const PRECACHE = ['./', 'https://weirders.github.io/ToolDeck/sync.v1.js'];
+const PRECACHE = ['./', 'https://weirders.github.io/ToolDeck/sync.v1.js', 'https://weirders.github.io/ToolDeck/photo-editor.v1.js'];
 const NET_TIMEOUT = 4000;
 const CDN = /^https:\/\/(cdnjs\.cloudflare\.com|cdn\.jsdelivr\.net|unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//;
 const CDN_TYPES = new Set(['script', 'style', 'font', 'worker', 'sharedworker']);
